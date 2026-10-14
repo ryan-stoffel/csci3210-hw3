@@ -1,0 +1,78 @@
+.dino-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  color: #535353;
+  font-family: monospace;
+}
+
+h1 {
+  margin: 0;
+}
+
+.toast {
+  min-height: 1.4em;
+  font-weight: bold;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  image-rendering: pixelated;
+  border: 1px solid #ddd;
+  touch-action: manipulation;
+  transition: filter 0.8s;
+}
+
+/* Night mode inverts the canvas. Moon and stars are drawn dark so they invert to light. */
+canvas.night {
+  filter: invert(1);
+}
+
+.controls {
+  font-size: 0.9rem;
+}
+
+kbd {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 0 4px;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  text-align: left;
+}
+
+.panels h2 {
+  font-size: 1.1rem;
+}
+
+.panels small {
+  color: #888;
+}
+
+.achievements li {
+  opacity: 0.45;
+  margin-bottom: 4px;
+}
+
+.achievements li.done {
+  opacity: 1;
+}
+
+.achievements li.done strong::before {
+  content: "[x] ";
+}
+
+.achievements li:not(.done) strong::before {
+  content: "[ ] ";
+}
+
+@media (max-width: 600px) {
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
